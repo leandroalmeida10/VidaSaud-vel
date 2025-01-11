@@ -64,7 +64,45 @@ function gerarRelatorio ( pacientes ){
     pacientes.forEach(paciente => {
                                 var imc = calculaIMC( paciente.peso, paciente.altura);
                                 var sit = verificaIMC( imc );
-                                listaNumerada.innerHTML += `<li> ${paciente.nome} - Situação: ${sit}</li>`;
+                                listaNumerada.innerHTML += `<li> ${paciente.nome} - IMC ${imc.toFixed(2)} - Situação: ${sit}</li>`;
         
     });
+}
+
+function mascPeso(input) {
+    var value = input.value;
+
+    value = value.replace(/\D/g, "");
+
+    if (value.length > 1) {
+        var integerPart = value.slice(0, -1); 
+        var decimalPart = value.slice(-1);   
+        value = `${integerPart}.${decimalPart}`;
+    }
+
+    input.value = value;
+}
+
+function mascAltura(input) {
+    var value = input.value;
+
+    value = value.replace(/\D/g, "");
+
+    if (value.length > 1) {
+        let integerPart = value.slice(0, 1);  
+        let decimalPart = value.slice(1);    
+        value = `${integerPart}.${decimalPart}`;
+    }
+
+    if (value === "") {
+        input.value = "";
+        return;
+    }
+    
+    
+    if (value.includes(".")) {
+        value = value.substring(0, value.indexOf(".") + 3);
+    }
+    
+    input.value = values;
 }
