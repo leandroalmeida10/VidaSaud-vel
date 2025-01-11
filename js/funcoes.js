@@ -59,7 +59,7 @@ function lerPaciente(){
 
 function gerarRelatorio ( pacientes ){
     var listaNumerada = document.getElementById("listaNumerada");
-    listaNumerada.innerHTML = ""; //limpa a lista
+    listaNumerada.innerHTML = ""; 
 
     pacientes.forEach(paciente => {
                                 var imc = calculaIMC( paciente.peso, paciente.altura);
@@ -104,5 +104,5 @@ function mascAltura(input) {
         value = value.substring(0, value.indexOf(".") + 3);
     }
     
-    input.value = values;
+    input.value = value;
 }

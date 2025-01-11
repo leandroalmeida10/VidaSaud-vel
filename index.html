@@ -5,14 +5,14 @@
     </head>
     <body>
         <div class="bg">
-            <h2>Calculadora IMC</h2>
+            <h2>Calculadora de IMC</h2>
         </div> 
         <div class="inputDiv">
             <input class="input" type="text" id="txtNome" placeholder="Digite seu nome" />
             <input class="input" type="text" id="numPeso" placeholder="Digite seu peso" oninput="mascPeso(this)" />
             <input class="input" type="text" id="numAltura" placeholder="Digite sua Altura" oninput="mascAltura(this)" />
-            <button type="button" id="calcular">Calcular</button>
-            <button type="button" id="relatorio">Gerar relatório</button>
+            <button class="botao" type="button" id="calcular">Calcular</button>
+            <button class="botao" type="button" id="relatorio">Gerar relatório</button>
         </div>
         <p>
             Nome: <span id="nome"></span><br/>
@@ -22,7 +22,7 @@
             Situação: <span id="situacao"></span><br>
         </p>
         <hr>
-        <ol id="listaNumerada"></ol>
+        <ol  class="lista" id="listaNumerada"></ol>
     </body>
     <script src="js/funcoes.js"></script>
     <script src="js/controller.js"></script>

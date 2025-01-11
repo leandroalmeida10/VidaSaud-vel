@@ -50,16 +50,14 @@ p {
 
 .bg {
     display: flex;
-    color: blueviolet;
+    color: #eff2f3e0;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     font-family: Tahoma;
     font-size: 50px;
     font-weight: bolder;
-    background-image: url( '../img/fundoTitulo.jpg' );
-    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #3b91e2;
     height: 250px;
 
 }
@@ -72,6 +70,77 @@ p {
     background-color: #f0f0f0;
     
 }
+
+.botao {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #80bdd1, #73aee9); 
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao:hover {
+    background-color: #4e5ed6; 
+    transform: translateY(-4px); 
+}
+
+.botao:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(98, 158, 255, 0.8); 
+}
+
+.botao:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Estilo geral para a lista ordenada */
+ol {
+    padding: 20px;
+    margin: 0;
+    list-style-type: none; /* Remove o marcador padrão */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para os itens da lista */
+ol li {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover para cada item da lista */
+ol li:hover {
+    background-color: #6e7bff; /* Cor de fundo ao passar o mouse */
+    color: white; /* Muda a cor do texto */
+    transform: translateX(10px); /* Leve movimento para a direita */
+}
+
+/* Estilo para os números da lista */
+ol li::before {
+    content: counter(list-item); /* Adiciona os números automaticamente */
+    counter-increment: list-item; /* Incrementa automaticamente o número */
+    position: absolute;
+    left: -40px; /* Coloca o número à esquerda do item */
+    font-size: 20px;
+    font-weight: bold;
+    color: #6e7bff; /* Cor do número */
+}
+
+
 
 
 
